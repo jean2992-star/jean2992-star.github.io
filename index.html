@@ -1,134 +1,168 @@
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jean Ivelsonne - Portfólio</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jean Ivelsonne - Portfólio</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-
-    <!-- Cabeçalho com Menu -->
-    <header class="main-header">
-        <h1>Jean Ivelsonne Dorvilma</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="evento.html">Eventos</a></li>
-                <li><a href="projetos.html">Projetos</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <div class="container">
-        <!-- Barra Lateral -->
-        <aside class="sidebar">
-            <div class="profile-img">
-                <img src="JEAN.jpg" alt="Jean Ivelsonne">
-            </div>
-            <section class="contact">
-                <h3>CONTATO</h3>
-                <p>📞 +55 49 98891 2668</p>
-                <p>✉️jeanivelsonne29@email.com</p>
-                <p> <a href="https://www.linkedin.com/in/jean-ivelsonne-dorvilma-1b4731140" target="_blank">LinkedIn</a></p>
-
-                <p>📍 Chapecó, SC</p>
-            </section>
-
-            <section class="education">
-                <h3>EDUCAÇÃO</h3>
-                <p><strong>Universidade Federal da Fronteira Sul</strong> (2022 - cursando)</p>
-                <p>Ciência da Computação</p>
-            </section>
-
-            <section class="education">
-                
-                <p><strong>Escola Da Nuvem</strong> (2024- cursando)</p>
-                <p>Restart AWS e Inteligência Artificial</p>
-            </section>
-
-            <section class="skills">
-                <h3>HABILIDADES</h3>
-                <ul>
-                    <li>HTML, CSS, JavaScript</li>
-                    <li>Python, Django</li>
-                    <li>Banco de Dados SQL</li>
-                    <li>Git, GitHub</li>
-                </ul>
-            </section>
-        </aside>   
-
-
-        <!-- Conteúdo Principal -->
-        <main class="content">
-            <section class="profile">
-                <h2>Sobre Mim</h2>
-                <p>Atualmente cursando Ciência da Computação, estou aprofundando meus conhecimentos em diversas áreas da tecnologia. No momento, estou expandindo meus horizontes através de um curso de Fundamentos de Computação em Nuvem e Inteligência Artificial da AWS , o que tem me permitido adquirir habilidades essenciais para o desenvolvimento e gestão de soluções em nuvem e aquisição de certificados.
-
-                    Além disso, sou estagiário auxiliar técnico de informática na Justiça Federal, onde tenho a oportunidade de aplicar e aprimorar meus conhecimentos técnicos em um ambiente profissional desafiador. 
-                    
-                    Estou sempre em busca de novas oportunidades de aprendizado e crescimento profissional, com o objetivo de contribuir para projetos inovadores e melhorar processos tecnológicos em minha área de atuação.</p>
-            </section>
-
-            <section class="work">
-                <h2>Experiência Profissional</h2>
-                <p><strong>Justiça Federal de Santa Catarina</strong> (2023 - Presente)</p>
-                <p>Suporte técnico  </p>
-                <p> Auxiliar no suporte em informatica para transmissão e AudioVisuais;Auxiliar no suporte para configuração de computadores e impressoras; Auxiliar na instalação de programas de computadores da Justiça Federal;Auxilio na configuração de redes.</p>
-
-                
-            </section>
-
-
-            <section>
-
-                <h2 class= "cursos"> Cursos e Certificações  </h2>
-                <p>  Computação em Nuvem/AWSDiscovery
-                    Day, <strong>Kasolution- 2024  </strong>  </p>
-
-                <p>  Programação Python e C, <strong> Instituto Federal
-                    do Espírito Santo – 2024   </strong></p>
-
-
-                    <p>   WFUNA International Model United Nations,  <strong>WFUNA World Federation of United Nations Associations - New York 2025. </strong>  </p>
-                    
-
-                    <p class="pcertification"> participou da Etapa de Nivelamento do Programa de Residência em TIC promovido pela 
-                        BRISA, com apoio da SOFTEX e financiado pelo Ministério de Ciência, Tecnologia e Inovação – MCTIC (recursos da Lei nº 8.248/91), em parceria estratégica com a UNOESC – 
-                        Universidade do Oeste de Santa Catarina, realizado entre os dias 24 de novembro de 2023 e 
-                        23 de janeiro de 2024, com 180 horas de carga de aula em modalidade de EaD, concluído 
-                        em 23 de janeiro de 2024.  <strong>  UNOESC, BRISA 2024. </strong></p>
-
-            </section>
-
-
-
-            <section>
-                <h2 class="atividade">  Atividades         </h2>
-                <p> Programação • Assistir filmes • Academia • Estudar• Viaja</p>
-
-
-
-            </section>
-
-
-
-
-            <!-- Chatbox -->
-<div id="chat-container">
-    <div id="chat-header">💬 Bate-Papo</div>
-    <div id="chat-body">
-        <ul id="chat-messages"></ul>
+  <header class="main-header">
+    <div class="menu-toggle" onclick="toggleMenu()">
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
     </div>
-    <div id="chat-footer">
-        <input type="text" id="chat-input" placeholder="Digite sua mensagem..." />
-        <button onclick="sendMessage()">Enviar</button>
+    <div class="side-menu" id="sideMenu">
+      <ul>
+        <li><a href="#profile">Sobre Mim</a></li>
+        <li><a href="#work">Experiência Profissional</a></li>
+        <li><a href="#cursos">Cursos e Certificações</a></li>
+        <li> <a href="#atividade">Atividades</a></li>
+        <li><a href="#projetos-destaque">Meus Projetos</a></li>
+        <li><a href="#form-contato">Fale Comigo</a></li>
+      </ul>
     </div>
-</div>
+    <h1>Jean Ivelsonne Dorvilma</h1>
+    <nav class="menu">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="evento.html">Eventos</a></li>
+        <li><a href="projetos.html">Projetos</a></li>
+        <li><a href="#profile">Sobre Mim</a></li>
+        <li><a href="#work">Experiência Profissional</a></li>
+        <li><a href="#cursos">Cursos e Certificações</a></li>
+        <li><a href="#projetos-destaque">Meus Projetos</a></li>
+        <li><a href="#form-contato">Fale Comigo</a></li>
+        <li><a href="Jean_Ivelsonne_CV.pdf" download>📄 Currículo</a></li>
+      </ul>
+    </nav>
+  </header>
 
+  <section class="hero-banner">
+    <h2>Transformando ideias em soluções digitais</h2>
+  </section>
 
-        </main>
-    </div>
+  <div class="container">
+    <aside class="sidebar">
+      <div class="profile-img">
+        <img src="JEAN.jpg" alt="Jean Ivelsonne">
+      </div>
+      <section class="contact">
+        <h3>CONTATO</h3>
+        <p>📞 +55 49 98891 2668</p>
+        <p>✉️jeanivelsonne29@email.com</p>
+        <p><a href="https://www.linkedin.com/in/jean-ivelsonne-dorvilma-1b4731140" target="_blank">LinkedIn</a></p>
+        <p>🔍 Chapecó, SC</p>
+      </section>
+      <section class="education">
+        <h3>EDUCAÇÃO</h3>
+        <p><strong>Universidade Federal da Fronteira Sul</strong> (2022 - cursando)</p>
+        <p>Ciência da Computação</p>
+        <p><strong>Escola Da Nuvem</strong> (2024- cursando)</p>
+        <p>Restart AWS e Inteligência Artificial</p>
+      </section>
+      <section class="skills">
+        <h3>HABILIDADES</h3>
+        <ul>
+          <li>HTML, CSS, JavaScript</li>
+          <li>Python, Django</li>
+          <li>Banco de Dados SQL</li>
+          <li>Git, GitHub</li>
+        </ul>
+      </section>
+    </aside>
 
+    <main class="content">
+      <section id="profile">
+        <h2>Sobre Mim</h2>
+        <p>Atualmente cursando Ciência da Computação, estou aprofundando meus conhecimentos em diversas áreas da tecnologia. No momento, estou expandindo meus horizontes através de um curso de Fundamentos de Computação em Nuvem e Inteligência Artificial da AWS , o que tem me permitido adquirir habilidades essenciais para o desenvolvimento e gestão de soluções em nuvem e aquisição de certificados.
+        <br><br>
+        Além disso, sou estagiário auxiliar técnico de informática na Justiça Federal, onde tenho a oportunidade de aplicar e aprimorar meus conhecimentos técnicos em um ambiente profissional desafiador. 
+        <br><br>
+        Estou sempre em busca de novas oportunidades de aprendizado e crescimento profissional, com o objetivo de contribuir para projetos inovadores e melhorar processos tecnológicos em minha área de atuação.</p>
+      </section>
+
+      <section id="work">
+        <h2>Experiência Profissional</h2>
+        <p><strong>Justiça Federal de Santa Catarina</strong> (2023 - Presente)</p>
+        <p>Suporte técnico  </p>
+        <p> Auxiliar no suporte em informática para transmissão e Audiovisuais; configuração de computadores e impressoras; instalação de programas e redes.</p>
+      </section>
+
+      <section>
+        <h2 id="cursos">Cursos e Certificações</h2>
+        <p>Computação em Nuvem / AWS Discovery Day, <strong>Kasolution - 2024</strong></p>
+        <p>Programação Python e C, <strong>Instituto Federal do Espírito Santo – 2024</strong></p>
+        <p>WFUNA International Model United Nations, <strong>WFUNA - New York 2025</strong></p>
+        <p class="pcertification">Participou da Etapa de Nivelamento do Programa de Residência em TIC promovido pela BRISA com apoio da SOFTEX e parceria com a UNOESC (180h, EaD). <strong>UNOESC, BRISA 2024</strong></p>
+      </section>
+
+      <section>
+        <h2 id="atividade">Atividades</h2>
+        <p>Programação • Assistir filmes • Academia • Estudar • Viajar</p>
+      </section>
+
+      <section id="projetos-destaque">
+        <h2>Meus Projetos</h2>
+        <ul>
+          <li><a href="https://github.com/jean2992/projeto1" target="_blank">Projeto 1 - Sistema de Reservas</a></li>
+          <li><a href="https://github.com/jean2992/projeto2" target="_blank">Projeto 2 - Portfólio Responsivo</a></li>
+        </ul>
+      </section>
+
+      <section>
+        <br>
+        <h2>Fale Comigo</h2>
+        <form id="form-contato">
+          <input type="text" name="nome" placeholder="Seu nome" required>
+          <input type="email" name="email" placeholder="Seu email" required>
+          <textarea name="mensagem" placeholder="Sua mensagem" required></textarea>
+          <br>
+            <button type="submit">Enviar Mensagem</button>    
+            <p id="resposta-form" style="color: green;"></p>
+        </form>
+      </section>
+    </main>
+  </div>
+
+    <script>
+  function toggleMenu() {
+    document.getElementById("sideMenu").classList.toggle("open");
+  }
+
+  // Fecha o menu ao clicar em qualquer link dentro dele
+  document.querySelectorAll("#sideMenu a").forEach(link => {
+    link.addEventListener("click", () => {
+      document.getElementById("sideMenu").classList.remove("open");
+    });
+  });
+
+  document.getElementById("form-contato")?.addEventListener("submit", async function (e) {
+    e.preventDefault();
+    const nome = this.nome.value.trim();
+    const email = this.email.value.trim();
+    const mensagem = this.mensagem.value.trim();
+    const respostaTexto = document.getElementById("resposta-form");
+    respostaTexto.textContent = "Enviando...";
+    try {
+      const resposta = await fetch("https://backend-reposi-rwbn.onrender.com", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ nome, email, mensagem }),
+      });
+      const dados = await resposta.json();
+      if (resposta.ok) {
+        respostaTexto.textContent = dados.mensagem || "Mensagem enviada com sucesso!";
+        this.reset();
+      } else {
+        respostaTexto.textContent = dados.erro || "Erro ao enviar mensagem.";
+      }
+    } catch (erro) {
+      respostaTexto.textContent = "Erro de conexão com o servidor.";
+    }
+  });
+</script>
 </body>
 </html>
