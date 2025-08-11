@@ -146,14 +146,25 @@
 
       <section>
         <h2 id="form-contato">Fale Comigo</h2>
-        <form id="form-contato">
-          <input type="text" name="nome" placeholder="Seu nome" required>
-          <input type="email" name="email" placeholder="Seu email" required>
-          <textarea name="mensagem" placeholder="Sua mensagem" required></textarea>
-          <br>
-          <button type="submit">Enviar Mensagem</button>
-          <p id="resposta-form" style="color: green;"></p>
-        </form>
+        <form id="form-contato" action="https://formsubmit.co/jeanivelsonne29@gmail.com" method="POST">
+  <!-- Anti-spam -->
+  <input type="text" name="_honey" style="display:none">
+  <input type="hidden" name="_captcha" value="false">
+  <!-- Redirecionar após enviar (opcional) -->
+  <input type="hidden" name="_next" value="https://jean2992-star.github.io/obrigado.html">
+  <input type="hidden" name="_next" value="http://127.0.0.1:3000/obrigado.html">
+
+  <!-- Assunto do email -->
+  <input type="hidden" name="_subject" value="Novo contato pelo site">
+
+  <input type="text" name="nome" placeholder="Seu nome" required>
+  <input type="email" name="email" placeholder="Seu email" required>
+  <textarea name="mensagem" placeholder="Sua mensagem" required></textarea>
+  <br>
+  <button type="submit">Enviar Mensagem</button>
+  <p id="resposta-form" style="color: green;"></p>
+</form>
+
       </section>
     </main>
   </div>
@@ -177,6 +188,6 @@
   </a>
 
   <!-- JS separado -->
-  <script src="script.js"></script>
+  <script src="script/script.js" defer></script>
 </body>
 </html>
