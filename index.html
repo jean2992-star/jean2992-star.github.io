@@ -1,29 +1,37 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Jean Ivelsonne - Portfólio</title>
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles.css"/>
+  <!-- Ícones para o botão do WhatsApp -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
 </head>
 <body>
   <header class="main-header">
+    <!-- Hamburguer que abre o menu lateral -->
     <div class="menu-toggle" onclick="toggleMenu()">
       <div class="bar"></div>
       <div class="bar"></div>
       <div class="bar"></div>
     </div>
+
+    <!-- Menu lateral mobile -->
     <div class="side-menu" id="sideMenu">
       <ul>
         <li><a href="#profile">Sobre Mim</a></li>
         <li><a href="#work">Experiência Profissional</a></li>
         <li><a href="#cursos">Cursos e Certificações</a></li>
-        <li> <a href="#atividade">Atividades</a></li>
+        <li><a href="#atividade">Atividades</a></li>
         <li><a href="#projetos-destaque">Meus Projetos</a></li>
         <li><a href="#form-contato">Fale Comigo</a></li>
       </ul>
     </div>
+
     <h1>Jean Ivelsonne Dorvilma</h1>
+
+    <!-- Menu de navegação desktop -->
     <nav class="menu">
       <ul>
         <li><a href="index.html">Home</a></li>
@@ -34,7 +42,7 @@
         <li><a href="#cursos">Cursos e Certificações</a></li>
         <li><a href="#projetos-destaque">Meus Projetos</a></li>
         <li><a href="#form-contato">Fale Comigo</a></li>
-        <li><a href="Jean_Ivelsonne_CV.pdf" download> Currículo</a></li>
+        <li><a href="documents/Jean_Ivelsonne_CV.pdf" download>Currículo</a></li>
       </ul>
     </nav>
   </header>
@@ -46,22 +54,25 @@
   <div class="container">
     <aside class="sidebar">
       <div class="profile-img">
-        <img src="JEAN.jpg" alt="Jean Ivelsonne">
+        <img src="images/JEAN.jpg" alt="Jean Ivelsonne">
       </div>
+
       <section class="contact">
         <h3>CONTATO</h3>
         <p>+55 49 98891 2668</p>
         <p>jeanivelsonne29@email.com</p>
-        <p><a href="https://www.linkedin.com/in/jean-ivelsonne-dorvilma-1b4731140" target="_blank">LinkedIn</a></p>
+        <p><a href="https://www.linkedin.com/in/jean-ivelsonne-dorvilma-1b4731140" target="_blank" rel="noopener">LinkedIn</a></p>
         <p>Chapecó, SC</p>
       </section>
+
       <section class="education">
         <h3>EDUCAÇÃO</h3>
         <p><strong>Universidade Federal da Fronteira Sul</strong> (2022 - cursando)</p>
         <p>Ciência da Computação</p>
-        <p><strong>Escola Da Nuvem</strong> (11/2024- 06/2025)</p>
+        <p><strong>Escola Da Nuvem</strong> (11/2024 - 06/2025)</p>
         <p>Restart AWS e Inteligência Artificial</p>
       </section>
+
       <section class="skills">
         <h3>HABILIDADES</h3>
         <ul>
@@ -76,105 +87,96 @@
     <main class="content">
       <section id="profile">
         <h2>Sobre Mim</h2>
-        <p>Atualmente cursando Ciência da Computação, estou aprofundando meus conhecimentos em diversas áreas da tecnologia. No momento, estou expandindo meus horizontes através de um curso de Fundamentos de Computação em Nuvem e Inteligência Artificial da AWS , o que tem me permitido adquirir habilidades essenciais para o desenvolvimento e gestão de soluções em nuvem e aquisição de certificados.
-        <br><br>
-        Além disso, sou estagiário auxiliar técnico de informática na Justiça Federal, onde tenho a oportunidade de aplicar e aprimorar meus conhecimentos técnicos em um ambiente profissional desafiador. 
-        <br><br>
-        Estou sempre em busca de novas oportunidades de aprendizado e crescimento profissional, com o objetivo de contribuir para projetos inovadores e melhorar processos tecnológicos em minha área de atuação.</p>
+        <p>
+          Atualmente cursando Ciência da Computação, estou aprofundando meus conhecimentos em diversas áreas da tecnologia.
+          No momento, estou expandindo meus horizontes através de um curso de Fundamentos de Computação em Nuvem e Inteligência Artificial da AWS,
+          o que tem me permitido adquirir habilidades essenciais para o desenvolvimento e gestão de soluções em nuvem e aquisição de certificados.
+        </p>
+        <p>
+          Além disso, sou estagiário auxiliar técnico de informática na Justiça Federal, onde tenho a oportunidade de aplicar e aprimorar meus conhecimentos
+          técnicos em um ambiente profissional desafiador.
+        </p>
+        <p>
+          Estou sempre em busca de novas oportunidades de aprendizado e crescimento profissional, com o objetivo de contribuir para projetos inovadores e
+          melhorar processos tecnológicos em minha área de atuação.
+        </p>
       </section>
 
       <section id="work">
         <h2>Experiência Profissional</h2>
         <p><strong>Justiça Federal de Santa Catarina</strong> (2023 - Presente)</p>
-        <p>Suporte técnico  </p>
-        <p> Auxiliar no suporte em informática para transmissão e Audiovisuais; configuração de computadores e impressoras; instalação de programas e redes.</p>
+        <p>Suporte técnico</p>
+        <p>Auxiliar no suporte em informática para transmissão e Audiovisuais; configuração de computadores e impressoras; instalação de programas e redes.</p>
       </section>
 
-      <section>
-        <h2 id="cursos">Cursos e Certificações</h2>
-        <p><a href="Certificado+Alunos+AWS+re_Start+++IA.pdf" download>Computação em Nuvem</a> / AWS Discovery Day, <strong>Kasolution - 2024</strong></p>
+      <section id="cursos">
+        <h2>Cursos e Certificações</h2>
+        <p><a href="documents/Certificado+Alunos+AWS+re_Start+++IA.pdf" download>Computação em Nuvem</a> / AWS Discovery Day, <strong>Kasolution - 2024</strong></p>
         <p>Programação Python e C, <strong>Instituto Federal do Espírito Santo – 2024</strong></p>
         <p>WFUNA International Model United Nations, <strong>WFUNA - New York 2025</strong></p>
-        <p class="pcertification">Participou da Etapa de Nivelamento do Programa de Residência em TIC promovido pela BRISA com apoio da SOFTEX e parceria com a UNOESC (180h, EaD). <strong>UNOESC, BRISA 2024</strong></p>
+        <p class="pcertification">
+          Participou da Etapa de Nivelamento do Programa de Residência em TIC promovido pela BRISA com apoio da SOFTEX e parceria com a UNOESC (180h, EaD).
+          <strong>UNOESC, BRISA 2024</strong>
+        </p>
       </section>
 
-      <section>
-        <h2 id="atividade">Atividades</h2>
+      <section id="atividade">
+        <h2>Atividades</h2>
         <p>Programação • Assistir filmes • Academia • Estudar • Viajar</p>
       </section>
 
-      <section id="projetos-destaque">
-        <h2>Meus Projetos</h2>
-        <ul>
-          <li><a href="https://github.com/jean2992-star/Projeto-de-gest-o-de-viagem" target="_blank">Projeto de Gestão de Viagem - Sistema gestão de viagem</a></li>
-          <li><a href="https://github.com/jean2992-star/Projeto_Farma" target="_blank">Projeto Farma - Sistema de Farmacia</a></li>
-        </ul>
+      <!-- ===== Seção de projetos ===== -->
+      <section id="projetos-destaque" class="section-projetos">
+        <div class="wrap">
+          <h2>Meus Projetos</h2>
+          <p class="sub">Seleção com foco em web, integrações e dados. Clique para ver demo.</p>
+
+          <div class="filtros" aria-label="Filtros de tecnologia">
+            <button class="chip active" data-filter="all">Todos</button>
+            <button class="chip" data-filter="javascript">JavaScript</button>
+            <button class="chip" data-filter="python">Python</button>
+            <button class="chip" data-filter="php">PHP</button>
+            <button class="chip" data-filter="wordpress">WordPress</button>
+            <button class="chip" data-filter="nestjs">NestJS</button>
+          </div>
+
+          <div id="grid-projetos" class="grid" role="list"></div>
+        </div>
       </section>
 
       <section>
-        <br>
-        <h2>Fale Comigo</h2>
+        <h2 id="form-contato">Fale Comigo</h2>
         <form id="form-contato">
           <input type="text" name="nome" placeholder="Seu nome" required>
           <input type="email" name="email" placeholder="Seu email" required>
           <textarea name="mensagem" placeholder="Sua mensagem" required></textarea>
           <br>
-            <button type="submit">Enviar Mensagem</button>    
-            <p id="resposta-form" style="color: green;"></p>
+          <button type="submit">Enviar Mensagem</button>
+          <p id="resposta-form" style="color: green;"></p>
         </form>
       </section>
     </main>
   </div>
 
-    <footer class="site-footer">
+  <footer class="site-footer">
     <div class="footer-content">
       <p>© 2025 Jean Ivelsonne Dorvilma. Todos os direitos reservados.</p>
       <div class="social-icons">
-        <a href="https://www.linkedin.com/in/jean-ivelsonne-dorvilma-1b4731140" target="_blank">LinkedIn</a>
-        <a href="https://github.com/jean2992-star" target="_blank">GitHub</a>
-        <a href="https://www.instagram.com/jean_ivelsonne" target="_blank">Instagram</a>
-        <a href="https://www.facebook.com/profile.php?id=100002294541855" target="_blank">Facebook</a>
-
+        <a href="https://www.linkedin.com/in/jean-ivelsonne-dorvilma-1b4731140" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://github.com/jean2992-star" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://www.instagram.com/jean_ivelsonne" target="_blank" rel="noopener">Instagram</a>
+        <a href="https://www.facebook.com/profile.php?id=100002294541855" target="_blank" rel="noopener">Facebook</a>
+        <a href="https://wa.me/5549988912668" target="_blank" rel="noopener">WhatsApp</a>
       </div>
     </div>
   </footer>
 
-    <script>
-  function toggleMenu() {
-    document.getElementById("sideMenu").classList.toggle("open");
-  }
+  <!-- Botão flutuante do WhatsApp  -->
+  <a class="whatsapp-fab" href="https://wa.me/5549988912668" target="_blank" aria-label="Falar no WhatsApp">
+    <i class="fab fa-whatsapp" aria-hidden="true"></i>
+  </a>
 
-  // Fecha o menu ao clicar em qualquer link dentro dele
-  document.querySelectorAll("#sideMenu a").forEach(link => {
-    link.addEventListener("click", () => {
-      document.getElementById("sideMenu").classList.remove("open");
-    });
-  });
-
-  document.getElementById("form-contato")?.addEventListener("submit", async function (e) {
-    e.preventDefault();
-    const nome = this.nome.value.trim();
-    const email = this.email.value.trim();
-    const mensagem = this.mensagem.value.trim();
-    const respostaTexto = document.getElementById("resposta-form");
-    respostaTexto.textContent = "Enviando...";
-    try {
-      const resposta = await fetch("https://backend-reposi-rwbn.onrender.com", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ nome, email, mensagem }),
-      });
-      const dados = await resposta.json();
-      if (resposta.ok) {
-        respostaTexto.textContent = dados.mensagem || "Mensagem enviada com sucesso!";
-        this.reset();
-      } else {
-        respostaTexto.textContent = dados.erro || "Erro ao enviar mensagem.";
-      }
-    } catch (erro) {
-      respostaTexto.textContent = "Erro de conexão com o servidor.";
-    }
-  });
-</script>
+  <!-- JS separado -->
+  <script src="script.js"></script>
 </body>
 </html>

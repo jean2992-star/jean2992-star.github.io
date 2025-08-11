@@ -81,7 +81,7 @@ nav.menu {
 }
 
 .hero-banner {
-  background: url("banner.jpg") center/cover no-repeat;
+  background: url("images/banner.jpg") center/cover no-repeat;
   height: 125px;
   color: white;
   display: flex;
@@ -196,32 +196,42 @@ form#form-contato button:hover {
 .side-menu {
   position: fixed;
   left: -250px;
-  top: 0;
-  width: 200px;
+  top: 0; /* pra começar no topo */
+  width: 250px; /* mais espaço pros textos */
   height: 100%;
   background-color: #343a40;
-  color: white;
   padding-top: 60px;
   transition: left 0.3s ease;
   z-index: 999;
+  overflow-y: auto; /* rolagem se necessário */
 }
 
+/* Quando o menu estiver aberto */
 .side-menu.open {
   left: 0;
 }
 
+/* Links do menu lateral */
 .side-menu ul {
   list-style: none;
   padding: 0;
+  margin: 0;
 }
 
 .side-menu ul li {
-  padding: 15px 20px;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
 }
 
 .side-menu ul li a {
-  color: white;
+  display: block;
+  color: white; /* deixa os textos visíveis */
   text-decoration: none;
+  padding: 12px 20px;
+  font-size: 16px;
+}
+
+.side-menu ul li a:hover {
+  background-color: rgba(255,255,255,0.1);
 }
 
 /* css footer */
@@ -255,3 +265,122 @@ form#form-contato button:hover {
 .site-footer .social-icons a:hover {
   text-decoration: underline;
 }
+/* ---------------------------------------
+   Seção de Projetos (cards + filtros)
+---------------------------------------- */
+:root{
+  --bg:#0f1220;
+  --card:#171a2b;
+  --muted:#8b90a6;
+  --text:#e7e9f3;
+  --brand:#3b82f6;
+  --ring: 0 8px 30px rgba(0,0,0,.35);
+}
+
+.section-projetos{
+  background: var(--bg);
+  color: var(--text);
+  padding: 64px 20px;
+}
+.section-projetos .wrap{ max-width:1100px; margin:0 auto; }
+.section-projetos h2{ font-size:clamp(28px,3vw,40px); margin:0 0 12px; }
+.section-projetos .sub{ color:var(--muted); margin-bottom:24px; }
+
+/* Filtros (chips) */
+.filtros{ display:flex; gap:10px; flex-wrap:wrap; margin:10px 0 28px; }
+.chip{
+  border:1px solid #283048;
+  background:#131628;
+  color:#cfd3e6;
+  padding:8px 12px;
+  border-radius:999px;
+  font-size:14px;
+  cursor:pointer;
+  transition:.25s ease;
+}
+.chip:hover, .chip.active{ border-color:var(--brand); color:#fff; }
+
+/* Grid e Card */
+.grid{
+  display:grid;
+  gap:18px;
+  grid-template-columns: repeat(auto-fill, minmax(260px,1fr));
+}
+.card{
+  background:var(--card);
+  border:1px solid #22263a;
+  border-radius:18px;
+  overflow:hidden;
+  box-shadow:var(--ring);
+  transform:translateY(0);
+  transition:transform .25s, border-color .25s, box-shadow .25s;
+}
+.card:hover{
+  transform:translateY(-3px);
+  border-color:#2c3150;
+  box-shadow:0 12px 40px rgba(0,0,0,.45);
+}
+
+/* Thumb + badge */
+.thumb{ aspect-ratio:16/9; background:linear-gradient(120deg,#1e293b,#0b1224); position:relative; }
+.thumb img{ width:100%; height:100%; object-fit:cover; display:block; }
+.badge{
+  position:absolute; left:12px; top:12px;
+  background:rgba(0,0,0,.55);
+  border:1px solid #334155;
+  color:#fff; font-size:12px;
+  padding:6px 9px; border-radius:999px;
+}
+
+/* Conteúdo do card */
+.card .body{ padding:16px 16px 14px; }
+.card h3{ margin:0 0 6px; font-size:18px; line-height:1.35; }
+.card p{ color:#cfd3e6; font-size:14px; margin:0 0 12px; min-height:42px; }
+
+/* Tags de tecnologia */
+.tags{ display:flex; flex-wrap:wrap; gap:6px; margin:8px 0 14px; }
+.tag{
+  font-size:12px; color:#cbd5e1;
+  background:#1b2035; border:1px solid #2a3250;
+  padding:6px 8px; border-radius:8px;
+}
+
+/* Ações */
+.actions{ display:flex; gap:10px; align-items:center; justify-content:space-between; }
+.btn{
+  display:inline-flex; align-items:center; gap:8px;
+  border:1px solid #2b3350; background:#12162a; color:#fff;
+  padding:8px 12px; border-radius:10px; text-decoration:none; font-size:14px;
+  transition:.25s ease;
+}
+.btn:hover{ border-color:var(--brand); }
+.btn.primary{ background:linear-gradient(135deg,#365bcf,#4f46e5); border-color:transparent; }
+.metrics{ display:flex; gap:10px; color:#b6bbcf; font-size:12px; }
+.metric{ display:inline-flex; align-items:center; gap:6px; }
+
+/* ---------------------------------------
+   Botão flutuante WhatsApp
+---------------------------------------- */
+.whatsapp-fab{
+  position: fixed;
+  right: 18px;
+  bottom: 18px;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: #25D366;
+  color: #fff;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  box-shadow: 0 8px 22px rgba(0,0,0,.25);
+  text-decoration: none;
+  font-size: 28px;
+  z-index: 999;
+}
+.whatsapp-fab:hover{
+  filter: brightness(1.05);
+  transform: translateY(-1px);
+}
+
+
