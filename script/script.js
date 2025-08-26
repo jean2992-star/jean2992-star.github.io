@@ -44,16 +44,16 @@ const PROJETOS = [
     demo: "https://jean2992-star.github.io/buildercv/",
     // codigo: "https://github.com/jean2992-star"
   },
-  // {
-  //   titulo: "Calendário de Aluguel (WordPress)",
-  //   descricao: "Plugin com preços dinâmicos, bloqueio de datas e reserva com AJAX. Estilo Airbnb.",
-  //   imagem: "img/wp-rent.jpg",
-  //   badge: "WordPress",
-  //   techs: ["PHP","WordPress","MySQL","HTMX"],
-  //   categorias: ["php","wordpress"],
-  //   demo: "#",
-  //   // codigo: "https://github.com/jean2992-star"
-  // }
+   {
+    titulo: "Jogo de Quebrar Cabeça para desktop",
+     descricao: "Jogo de quebra-cabeça deslizante (15 puzzle) desenvolvido em Java, Netbeans, e SQlite 3. O jogo apresenta uma grade 4x4 com peças numeradas de 1 a 18 e um espaço vazio, permitindo que os jogadores deslizem as peças para reorganizá-las em ordem da imagem. Inclui funcionalidades como embaralhamento das peças, contagem de movimentos e verificação de vitória.",
+     imagem: "images/page_jogo.png",
+     badge: "Java",
+     techs: ["Java","Netbeans","SQLite 3"],
+     categorias: ["Java","Netbeans"],
+     demo: "#",
+     codigo: "https://github.com/jean2992-star/Game_BrainBreak.git"
+   }
 ];
 
 const grid = document.getElementById("grid-projetos");
