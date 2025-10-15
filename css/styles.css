@@ -83,7 +83,7 @@ nav.menu {
 .hero-banner {
   background: url("images/banner.jpg") center/cover no-repeat;
   height: 125px;
-  color: white;
+  color: rgb(14, 3, 3);
   display: flex;
   align-items: center;
   justify-content: center;
