@@ -1,72 +1,255 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Fluência em Inglês - Guia Completo</title>
-  <link rel="stylesheet" href="css/styles.css">
-  <script src="script/theme.js" defer></script>
-  <link rel="icon" type="image/png" href="images/usa_flag.png">
+  <title>English Portal 2.0 - Learn English Naturally</title>
+  <link rel="stylesheet" href="css/english.css">
+  <script src="script/english.js" defer></script>
+  <link rel="icon" type="image/png" href="images/usflag.png">
 </head>
-<body>
-  <header class="main-header">
-    <nav class="main-nav">
-      <ul>
-        <li><a href="index.html">🏠 Início</a></li>
-        <li><a href="projetos.html">💻 Projetos</a></li>
-        <li><a href="evento.html">📅 Eventos</a></li>
-        <li><a href="obrigado.html">🙏 Obrigado</a></li>
-        <li><a href="fluencia.html" class="active">🇺🇸 Fluência</a></li>
-      </ul>
-      <button id="theme-toggle">🌙 Modo Escuro</button>
-    </nav>
-  </header>
 
+<body>
+  <!-- SIDEBAR MENU -->
+  <aside class="sidebar">
+    <h2>🇺🇸 English Portal</h2>
+    <nav>
+      <ul>
+        <li><a href="#wordofday">🔤 Word of the Day</a></li>
+        <li><a href="#practice">🗣️ Daily Practice</a></li>
+        <li><a href="#expressions">💬 Expressions</a></li>
+        <li><a href="#grammar">🧩 Grammar Tips</a></li>
+        <li><a href="#vocabularysearch">📚 Vocabulary Search</a></li>
+        <li><a href="#steps">🎓 Steps to Fluency</a></li>
+        <li><a href="#podcasts">🎧 Podcasts</a></li>
+        <li><a href="#tools">🧠 Tools</a></li>
+        <li><a href="#books">📖 Books</a></li>
+        <li><a href="#routine">📅 Routine</a></li>
+        <li><a href="#timer">⏱️ Focus Timer</a></li>
+      </ul>
+    </nav>
+    <button id="theme-toggle">🌙 Dark Mode</button>
+  </aside>
+
+  <!-- MAIN CONTENT -->
   <main>
-    <section class="intro">
-      <h2>📘 Etapas para a Fluência</h2>
+    <header class="hero">
+      <img src="images/usflag.png" alt="USA Flag" class="flag">
+      <h1>Learn English Naturally Every Day</h1>
+      <p>Free tools, podcasts, and methods to sound like an American.</p>
+    </header>
+
+    <!-- 1️⃣ WORD OF THE DAY -->
+    <section id="wordofday" class="section">
+      <h2>🔤 Word of the Day</h2>
+      <div id="word-box">
+        <h3 id="word">Loading...</h3>
+        <p id="definition"></p>
+        <p><em id="example"></em></p>
+        <button id="audio-btn">🔊 Hear Pronunciation</button>
+      </div>
+    </section>
+
+    <!-- 2️⃣ DAILY PRACTICE -->
+    <section id="practice" class="section">
+      <h2>🗣️ Daily Practice</h2>
+      <p>Improve your English with small consistent exercises. Here are daily ideas:</p>
+      <ul id="practice-list">
+        <li>Write one paragraph about your day.</li>
+        <li>Listen to a short podcast and repeat one sentence aloud.</li>
+        <li>Record yourself reading an English text for 1 minute.</li>
+        <li>Learn 5 new words and use them in a sentence.</li>
+        <li>Translate a short paragraph from English to your language.</li>
+      </ul>
+      <p><i>💡 Tip:</i> Combine writing and speaking practice daily to build fluency faster.</p>
+    </section>
+
+    <!-- 3️⃣ EXPRESSIONS -->
+    <section id="expressions" class="section">
+      <h2>💬 Expressions of the Week</h2>
+      <p>Discover natural English expressions used by Americans every day:</p>
+      <div id="expression-list">
+        <p><b>Break the ice</b> — To start a conversation in a social situation.</p>
+        <p><b>Hit the books</b> — To study hard.</p>
+        <p><b>Piece of cake</b> — Something very easy to do.</p>
+        <p><b>Once in a blue moon</b> — Something that happens rarely.</p>
+        <p><b>Speak of the devil</b> — When the person you’re talking about appears.</p>
+      </div>
+      <p class="note">🔄 New expressions appear automatically every time you reload this page.</p>
+    </section>
+
+    <!-- 4️⃣ GRAMMAR TIPS -->
+    <section id="grammar" class="section">
+      <h2>🧩 Grammar Tips</h2>
+      <p>Learn key grammar differences with examples:</p>
+
+      <details>
+        <summary>Do vs Make</summary>
+        <p>Use <b>do</b> for actions (do homework) and <b>make</b> for creating (make a cake).</p>
+      </details>
+
+      <details>
+        <summary>Some vs Any</summary>
+        <p>Use <b>some</b> in positive sentences and <b>any</b> in negatives or questions.</p>
+      </details>
+
+      <details>
+        <summary>Since vs For</summary>
+        <p>Use <b>since</b> for start points (since 2020) and <b>for</b> for durations (for 2 years).</p>
+      </details>
+
+      <p class="note">💡 Three random grammar tips will refresh dynamically each visit.</p>
+    </section>
+
+    <!-- 5️⃣ VOCABULARY SEARCH -->
+    <section id="vocabularysearch" class="section">
+      <h2>📚 Vocabulary Search</h2>
+      <p>Type a word to get its meaning, example, and pronunciation.</p>
+      <input type="text" id="searchWord" placeholder="Type a word..." />
+      <button id="searchBtn">Search</button>
+      <div id="result"></div>
+    </section>
+
+    <!-- 6️⃣ STEPS TO FLUENCY -->
+    <section id="steps" class="section">
+      <h2>🎓 Steps to English Fluency</h2>
       <ol>
-        <li><strong>Fundamentos:</strong> Gramática, tempos verbais e vocabulário essencial.</li>
-        <li><strong>Conversação:</strong> Shadowing e expressões do inglês americano.</li>
-        <li><strong>Listening:</strong> Podcasts como <a href="https://learningenglish.voanews.com/z/1689" target="_blank">VOA Learning English</a> e <a href="https://eslpod.com/" target="_blank">ESLPod</a>.</li>
-        <li><strong>Escrita:</strong> Diário em inglês e prática de pensamento direto.</li>
+        <li>
+          <strong>Fundamentals:</strong> Learn grammar, verb tenses, and essential vocabulary for free:
+          <ul>
+            <li>📗 <a href="https://www.bbc.co.uk/learningenglish" target="_blank">BBC Learning English</a></li>
+            <li>📘 <a href="https://learnenglish.britishcouncil.org/" target="_blank">British Council – Learn English</a></li>
+            <li>📙 <a href="https://dictionary.cambridge.org/" target="_blank">Cambridge Dictionary</a></li>
+          </ul>
+        </li>
+
+        <li>
+          <strong>Conversation:</strong> Practice shadowing and American English expressions with free resources:
+          <ul>
+            <li>🎧 <a href="https://www.youtube.com/@rachelsenglish" target="_blank">Rachel’s English</a></li>
+            <li>🗣️ <a href="https://www.youtube.com/@englishwithlucy" target="_blank">English with Lucy</a></li>
+            <li>💬 <a href="https://youglish.com/" target="_blank">YouGlish</a></li>
+          </ul>
+        </li>
+
+        <li>
+          <strong>Listening:</strong> Improve your listening and comprehension skills for free:
+          <ul>
+            <li>🎙️ <a href="https://learningenglish.voanews.com/z/1689" target="_blank">VOA Learning English</a></li>
+            <li>🎧 <a href="https://eslpod.com/" target="_blank">ESLPod</a></li>
+            <li>🎧 <a href="https://www.podbean.com/podcast-detail/yht34-41a86/English-in-a-Minute---VOA-Learning-English-Podcast" target="_blank">English in a Minute – VOA (Podbean)</a></li>
+            <li>🎥 <a href="https://www.youtube.com/@voalearningenglish" target="_blank">VOA Learning English (YouTube)</a></li>
+            <li>🎧 <a href="https://elllo.org/" target="_blank">ELLLO.org</a></li>
+          </ul>
+        </li>
+
+        <li>
+          <strong>Writing:</strong> Practice writing and start thinking directly in English:
+          <ul>
+            <li>📝 <a href="https://www.quill.org/" target="_blank">Quill.org</a></li>
+            <li>✍️ <a href="https://www.lingq.com/en/" target="_blank">LingQ</a></li>
+            <li>🧠 <a href="https://writeandimprove.com/" target="_blank">Write & Improve (Cambridge)</a></li>
+          </ul>
+        </li>
       </ol>
     </section>
 
-    <section class="tools">
-      <h2>🧠 Ferramentas Úteis</h2>
+    <!-- PODCASTS -->
+    <section id="podcasts" class="section">
+      <h2>🎧 Podcasts & YouTube Channels</h2>
+      <div class="podcast-grid">
+        <div class="pod-card">
+          <h3>ESLPod</h3>
+          <p>Classic English podcast with dialogues, slow explanations, and transcripts.</p>
+          <a href="https://eslpod.com/" target="_blank" class="btn">Listen Now</a>
+        </div>
+        <div class="pod-card">
+          <h3>VOA Learning English</h3>
+          <p>Official U.S. news podcast and YouTube channel for learners worldwide.</p>
+          <a href="https://learningenglish.voanews.com/z/1689" target="_blank" class="btn">Explore VOA</a>
+        </div>
+        <div class="pod-card">
+          <h3>English in a Minute (VOA)</h3>
+          <p>Short and fun daily podcast to learn idioms and expressions.</p>
+          <a href="https://www.podbean.com/podcast-detail/yht34-41a86/English-in-a-Minute---VOA-Learning-English-Podcast" target="_blank" class="btn">Play Episodes</a>
+        </div>
+        <div class="pod-card">
+          <h3>VOA YouTube Channel</h3>
+          <p>Watch American English videos with subtitles and real pronunciation.</p>
+          <a href="https://www.youtube.com/@voalearningenglish" target="_blank" class="btn">Watch Videos</a>
+        </div>
+        <div class="pod-card">
+          <h3>ELLLO.org</h3>
+          <p>Over 3,000 free listening lessons, interviews, and quizzes.</p>
+          <a href="https://elllo.org/" target="_blank" class="btn">Start Listening</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- TOOLS -->
+    <section id="tools" class="section">
+      <h2>🧠 Extra Tools for Practice</h2>
       <ul>
-        <li><a href="https://www.elsaspeak.com" target="_blank">Elsa Speak</a> — Corrige sua pronúncia com IA.</li>
-        <li><a href="https://www.hellotalk.com" target="_blank">HelloTalk</a> — Converse com nativos.</li>
-        <li><a href="https://www.bbc.co.uk/learningenglish" target="_blank">BBC Learning English</a> — Gramática e vocabulário.</li>
-        <li><a href="https://rachelsenglish.com" target="_blank">Rachel’s English</a> — Pronúncia americana.</li>
+        <li><a href="https://www.elsaspeak.com" target="_blank">Elsa Speak</a> — Practice pronunciation with AI feedback.</li>
+        <li><a href="https://www.hellotalk.com" target="_blank">HelloTalk</a> — Chat with native speakers for free.</li>
+        <li><a href="https://rachelsenglish.com" target="_blank">Rachel’s English Website</a> — Learn natural American speech.</li>
+        <li><a href="https://www.bbc.co.uk/learningenglish" target="_blank">BBC Learning English</a> — Grammar and vocabulary lessons.</li>
       </ul>
     </section>
 
-    <section class="podcasts">
-      <h2>🎧 Melhores Podcasts e Canais</h2>
-      <ul>
-        <li>🔹 <a href="https://eslpod.com/" target="_blank">ESLPod</a> — Podcast clássico de inglês americano com explicações detalhadas.</li>
-        <li>🔹 <a href="https://learningenglish.voanews.com/z/1689" target="_blank">VOA Learning English</a> — Notícias e histórias em inglês simplificado.</li>
-        <li>🔹 <a href="https://www.podbean.com/podcast-detail/yht34-41a86/English-in-a-Minute---VOA-Learning-English-Podcast" target="_blank">VOA – English in a Minute (Podbean)</a> — Episódios curtos para praticar expressões do dia a dia.</li>
-        <li>🔹 <a href="https://www.youtube.com/watch?v=kmQBICeWhAQ" target="_blank">🎥 YouTube: VOA Learning English</a> — Canal com vídeos educativos e legendas em inglês.</li>
-      </ul>
+    <!-- BOOKS -->
+    <section id="books" class="section">
+      <h2>📖 Free English Books Online</h2>
+      <div class="book-grid">
+        <div class="book-card">
+          <h3>Project Gutenberg</h3>
+          <p>Over 60,000 free eBooks in English – novels, stories, and literature classics.</p>
+          <a href="https://www.gutenberg.org/" target="_blank" class="btn">Read Books</a>
+        </div>
+        <div class="book-card">
+          <h3>ManyBooks</h3>
+          <p>Free library of modern and public-domain English books with online reader.</p>
+          <a href="https://manybooks.net/language/English" target="_blank" class="btn">Explore Library</a>
+        </div>
+        <div class="book-card">
+          <h3>Google Books (Free Section)</h3>
+          <p>Search for free books and preview chapters in English directly on Google Books.</p>
+          <a href="https://books.google.com/?lr=lang_en" target="_blank" class="btn">Search Books</a>
+        </div>
+        <div class="book-card">
+          <h3>Open Library</h3>
+          <p>Digital library with millions of English books to borrow or read online for free.</p>
+          <a href="https://openlibrary.org/" target="_blank" class="btn">Visit Library</a>
+        </div>
+      </div>
     </section>
 
-    <section class="routine">
-      <h2>📅 Rotina de 30 Dias</h2>
+    <!-- ROUTINE -->
+    <section id="routine" class="section">
+      <h2>📅 30-Day Fluency Plan</h2>
       <table>
-        <tr><th>Semana</th><th>Foco</th><th>Ferramentas</th></tr>
-        <tr><td>1</td><td>Pronúncia e frases básicas</td><td>Elsa Speak, Rachel’s English</td></tr>
-        <tr><td>2</td><td>Listening e repetição</td><td>VOA Learning English, ESLPod</td></tr>
-        <tr><td>3</td><td>Conversação real</td><td>HelloTalk, Podbean</td></tr>
-        <tr><td>4</td><td>Escrita e revisão</td><td>ChatGPT, Grammarly</td></tr>
+        <tr><th>Week</th><th>Focus</th><th>Recommended Tools</th></tr>
+        <tr><td>1</td><td>Pronunciation & Basic Phrases</td><td>Elsa Speak, Rachel’s English</td></tr>
+        <tr><td>2</td><td>Listening & Repetition</td><td>VOA, ESLPod, Podbean</td></tr>
+        <tr><td>3</td><td>Real Conversation</td><td>HelloTalk, YouGlish</td></tr>
+        <tr><td>4</td><td>Writing & Review</td><td>Write & Improve, Quill.org</td></tr>
       </table>
     </section>
-  </main>
 
-  <footer>
-    <p>Feito com ❤️ por <strong>Jean Ivelsonne Dorvilma</strong> | <a href="https://jean2992-star.github.io" target="_blank">jean2992-star.github.io</a></p>
-  </footer>
+    <!-- TIMER -->
+    <section id="timer" class="section">
+      <h2>⏱️ Focus Study Timer</h2>
+      <div id="timer-box">
+        <p id="time">25:00</p>
+        <button id="startTimer">Start</button>
+        <button id="resetTimer">Reset</button>
+      </div>
+    </section>
+
+    <footer>
+      <p>Made with ❤️ by <b>Jean Ivelsonne Dorvilma</b> | 
+      <a href="https://jean2992-star.github.io" target="_blank">jean2992-star.github.io</a></p>
+    </footer>
+  </main>
 </body>
 </html>
