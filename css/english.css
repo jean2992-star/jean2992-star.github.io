@@ -1,0 +1,114 @@
+:root {
+  --bg: #f9f9f9;
+  --text: #333;
+  --header-bg: #003366;
+  --accent: #007bff;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  margin: 0;
+  background-color: var(--bg);
+  color: var(--text);
+  transition: 0.4s;
+}
+
+/* Header e navegação */
+header.main-header {
+  background-color: var(--header-bg);
+  color: white;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+header .main-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+  margin: 0;
+  padding: 0;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+nav a:hover, nav a.active {
+  text-decoration: underline;
+  color: var(--accent);
+}
+
+#theme-toggle {
+  background: none;
+  border: 2px solid white;
+  color: white;
+  padding: 8px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#theme-toggle:hover {
+  background-color: white;
+  color: var(--header-bg);
+}
+
+/* Conteúdo principal */
+main {
+  padding: 30px;
+  max-width: 900px;
+  margin: auto;
+}
+
+h2 {
+  color: var(--accent);
+  border-left: 4px solid var(--accent);
+  padding-left: 10px;
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+}
+
+th, td {
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: left;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: var(--header-bg);
+  color: white;
+}
+
+/* 🌙 Dark Theme */
+body.dark {
+  --bg: #121212;
+  --text: #f1f1f1;
+  --header-bg: #1e1e1e;
+  --accent: #66b3ff;
+}
